@@ -21,19 +21,19 @@
 
 <body>
   <div class="buttCont">
-    <button class="up" onclick="scrollWin.scrollUp()">
+    <button id="up" onclick="scrollWin.scrollUp()">
       <img
         src="https://img.icons8.com/material/24/000000/give-way--v1.png"
         style="transform: rotate(180deg)"
       />
     </button>
-    <button class="down" onclick="scrollWin.scrollDown()">
+    <button id="down" onclick="scrollWin.scrollDown()">
       <img src="https://img.icons8.com/material/24/000000/give-way--v1.png" />
     </button>
   </div>
 
   <div class="container" id="container">
-    <section class="one" style="opacity: 10">
+    <section class="one">
       <div class="circle">
         <div class="logoIm"></div>
         <div class="text">
@@ -42,7 +42,8 @@
       </div>
     </section>
     <section class="two" id="two">
-      <ul class="cards">
+      <button id="projects">Projects</button>
+      <ul id="cards" class="cards">
         <li class="card cards__item">
           <div class="card__frame">
             <div class="card__picture">
@@ -112,7 +113,7 @@
       </ul>
     </section>
     <section class="three" id="three">
-      <button id="typeButt" onclick="typeWriter()">Some things About me</button>
+      <button id="typeButt" onclick="typeWriter()">About me</button>
     </section>
     <section class="four" id="four">
       <button id="fist">👋</button>

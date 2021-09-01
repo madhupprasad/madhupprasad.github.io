@@ -5,13 +5,23 @@ const scrollWin = {
   downElem: document.querySelector("#scrollButtonDown"),
   upElem: document.querySelector("#scrollButtonUp"),
   sign: document.querySelector("#sign"),
-
+  randomColor: function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
+},
   scrollDown: function util() {
     this.containerElem.scrollBy(0, this.pageHeight);
+    const rgb = this.randomColor();
+    $("#up").css("border",`0.3rem solid ${rgb}`);
+    $("#down").css("border",`0.3rem solid ${rgb}`);
+
+
   },
   scrollUp: function util() {
     this.containerElem.scrollBy(0, -this.pageHeight);
-  },
+    const rgb = this.randomColor();
+    $("#up").css("border",`0.3rem solid ${rgb}`);
+    $("#down").css("border",`0.3rem solid ${rgb}`);  },
 };
 
 $("#fist").click(function () {
@@ -49,3 +59,10 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+
+$("#projects").click(function () {
+  this.style.display = "none";
+  $("#cards").css("visibility", "visible");
+  $("#cards").css("opacity", "1");
+
+});
