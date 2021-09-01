@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+.circle {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoIm {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("img5.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 3;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background-blend-mode: multiply;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  filter: grayscale(1);
+}
+
+.logoIm:hover {
+  filter: grayscale(0);
+}
+
+.logoIm:active {
+  opacity: 1;
+  /* transform: scale(1.3); */
+  border-radius: 50%;
+  /* width: 300px;
+  height: 300px; */
+  background-image: url("img5_2.png");
+  background-size: cover;
+  background-position: cover;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 10s linear infinite;
+  color: black;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 125px; /* circle width /2 */
+}
