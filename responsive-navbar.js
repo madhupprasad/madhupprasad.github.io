@@ -69,7 +69,9 @@ $("#projects").click(function () {
 });
 
 const r = Math.random() * (1081 - 1) + 1;
-fetch(`https://api-thirukkural.vercel.app/api?num=${r}`)
+fetch(`https://api-thirukkural.vercel.app/api?num=${r}`, {
+  "permissions-policy": "interest-cohort=()",
+})
   .then((res) => res.json())
   .then(
     (data) => {
