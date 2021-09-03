@@ -6,6 +6,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+  <script src="https://use.fontawesome.com/68378735fd.js"></script>
+
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
@@ -37,32 +39,40 @@
       <div class="circle">
         <div class="logoIm"></div>
         <div class="text">
-          <p>Madhupprasad S - Fullstack Developer - @Everstage -</p>
+          <p>Madhupprasad S - Fullstack Developer - PSG tech -</p>
         </div>
       </div>
     </section>
-    <section class="two" id="two">
+
+    <section class="onepointfive">
+      <img src="thiru.png" widht="150" height="150" style="color: aqua" />
+      <div class="containerbackground" id="thiru"></div>
+    </section>
+
+    <section data-text="Default-text" class="two" id="two">
       <button id="projects">Projects</button>
       <ul id="cards" class="cards">
         <li class="card cards__item">
           <div class="card__frame">
             <div class="card__picture">
               <img
-                src="https://image.flaticon.com/icons/svg/1496/1496034.svg"
+                src="https://image.flaticon.com/icons/svg/1336/1336494.svg"
                 alt=""
                 width="120"
               />
             </div>
-            <h2 class="card__title">Design</h2>
+            <h2 class="card__title">
+              <a href="https://madhu.ninja" target="_blank"
+                >Library Genesis 2.0</a
+              >
+            </h2>
           </div>
           <div class="card__overlay"></div>
           <div class="card__content">
-            <h2>Design</h2>
+            <h2>Library Genesis 2.0</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
-              ipsum veritatis id quia cupiditate sed architecto aliquam nostrum
-              unde nam minima voluptas dicta, beatae sint reprehenderit sit
-              ducimus officiis ratione?
+              An online ebook finder and downloader built with React, Beautiful
+              soup and Flask.
             </p>
           </div>
         </li>
@@ -75,16 +85,15 @@
                 width="120"
               />
             </div>
-            <h2 class="card__title">Code</h2>
+            <h2 class="card__title">Suit Up</h2>
           </div>
           <div class="card__overlay"></div>
           <div class="card__content">
-            <h2>Code</h2>
+            <h2>Suit Up</h2>
             <p>
-              Dignissimos ipsam culpa vitae vel hic harum omnis doloremque
-              debitis laudantium neque quos iure voluptates quidem ratione esse
-              modi, rerum illum facere eius accusantium dolorem incidunt beatae
-              officiis voluptatem? Nostrum.
+              A Visual Studio Code extension (Javascript) built for finding
+              information about the assets like images and fonts in a project
+              using Pattern Matching and removing the unused assets.
             </p>
           </div>
         </li>
@@ -92,21 +101,19 @@
           <div class="card__frame">
             <div class="card__picture">
               <img
-                src="https://image.flaticon.com/icons/svg/478/478543.svg"
+                src="https://image.flaticon.com/icons/svg/1336/1336494.svg"
                 alt=""
                 width="120"
               />
             </div>
-            <h2 class="card__title">Launch</h2>
+            <h2 class="card__title">Xtreme11</h2>
           </div>
           <div class="card__overlay"></div>
           <div class="card__content">
-            <h2>Launch</h2>
+            <h2>Xtreme11</h2>
             <p>
-              Asperiores, harum dignissimos at neque quaerat, excepturi, ipsa in
-              consectetur blanditiis tempore error! Libero fuga possimus qui
-              saepe temporibus praesentium, ut ratione facere rem distinctio,
-              beatae omnis officiis illum animi.
+              A Simulation of IPL (Indian Premier League) Auction developed for
+              web with React, NodeJS and SocketIO for real-time communication.
             </p>
           </div>
         </li>
@@ -148,6 +155,19 @@
           stroke-linecap="round"
         />
       </svg>
+
+      <div id="contact" style="display: none; cursor: pointer">
+        <i
+          class="fa fa-github fa-4x icon-3d"
+          onclick="location.href='https://github.com/madhupprasad'"
+        >
+        </i>
+        <i
+          class="fa fa-linkedin fa-4x icon-3d"
+          onclick="location.href='https://www.linkedin.com/in/madhupprasad-s-00258817b/'"
+        >
+        </i>
+      </div>
     </section>
   </div>
 </body>

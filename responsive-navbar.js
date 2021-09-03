@@ -6,27 +6,29 @@ const scrollWin = {
   upElem: document.querySelector("#scrollButtonUp"),
   sign: document.querySelector("#sign"),
   randomColor: function random_rgba() {
-    var o = Math.round, r = Math.random, s = 255;
-    return 'rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
-},
+    var o = Math.round,
+      r = Math.random,
+      s = 255;
+    return "rgb(" + o(r() * s) + "," + o(r() * s) + "," + o(r() * s) + ")";
+  },
   scrollDown: function util() {
     this.containerElem.scrollBy(0, this.pageHeight);
     const rgb = this.randomColor();
-    $("#up").css("border",`0.3rem solid ${rgb}`);
-    $("#down").css("border",`0.3rem solid ${rgb}`);
-
-
+    $("#up").css("border", `0.3rem solid ${rgb}`);
+    $("#down").css("border", `0.3rem solid ${rgb}`);
   },
   scrollUp: function util() {
     this.containerElem.scrollBy(0, -this.pageHeight);
     const rgb = this.randomColor();
-    $("#up").css("border",`0.3rem solid ${rgb}`);
-    $("#down").css("border",`0.3rem solid ${rgb}`);  },
+    $("#up").css("border", `0.3rem solid ${rgb}`);
+    $("#down").css("border", `0.3rem solid ${rgb}`);
+  },
 };
 
 $("#fist").click(function () {
   this.style.display = "none";
   $("#sign").css("display", "block");
+  $("#contact").css("display", "block");
 });
 
 const text = document.querySelector(".text p");
@@ -39,7 +41,7 @@ text.innerHTML = text.innerText
 
 var i = 0;
 var txt = `I did internships as a frontend developer in apipatform.io and Fanclash.
-In that time I learnt a lot about coding standards used in industries. I
+In that time I came to know about the coding standards used in industry. I
 worked with Angular, React Native as the main development environment. I
 also dealt with many of the framework’s intricacies. I developed landing
 pages of the company's website, developed react-native components, fixed
@@ -49,7 +51,7 @@ experiences have served me well in developing my collaboration,
 communication, and critical thinking skills. I work well to use clear and
 concise communication to interact professionally with co-workers,
 supervisors and customers.`;
-var speed = 30;
+var speed = 10;
 
 function typeWriter() {
   document.getElementById("typeButt").style.display = "none";
@@ -64,5 +66,18 @@ $("#projects").click(function () {
   this.style.display = "none";
   $("#cards").css("visibility", "visible");
   $("#cards").css("opacity", "1");
-
 });
+
+const r = Math.random() * (1081 - 1) + 1;
+fetch(`https://api-thirukkural.vercel.app/api?num=${r}`)
+  .then((res) => res.json())
+  .then(
+    (data) => {
+      let el = document.getElementById("thiru");
+      el.innerHTML =
+        data.line1 + " <br>" + data.line2 + "<br><br>" + data.eng_exp;
+    },
+    (error) => {
+      console.log("bah");
+    }
+  );
