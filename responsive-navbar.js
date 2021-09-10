@@ -68,18 +68,27 @@ $("#projects").click(function () {
   $("#cards").css("opacity", "1");
 });
 
-const r = Math.random() * (1081 - 1) + 1;
-fetch(`https://api-thirukkural.vercel.app/api?num=${r}`, {
-  "permissions-policy": "interest-cohort=()",
-})
-  .then((res) => res.json())
-  .then(
-    (data) => {
-      let el = document.getElementById("thiru");
-      el.innerHTML =
-        data.line1 + " <br>" + data.line2 + "<br><br>" + data.eng_exp;
-    },
-    (error) => {
-      console.log("bah");
-    }
-  );
+function callKural() {
+  const r = Math.random() * (1081 - 1) + 1;
+
+  fetch(`https://api-thirukkural.vercel.app/api?num=${r}`, {
+    "permissions-policy": "interest-cohort=()",
+  })
+    .then((res) => res.json())
+    .then(
+      (data) => {
+        let el = document.getElementById("thiru");
+        el.innerHTML =
+          data.line1 + " <br>" + data.line2 + "<br><br>" + data.eng_exp;
+      },
+      (error) => {
+        console.log("bah");
+      }
+    );
+}
+
+callKural();
+
+$("#random").click(function () {
+  callKural();
+});
